@@ -95,3 +95,8 @@
 //     console.log(`It's a tie (Koalas: ${averageKoalaScore} Dolphins: ${averageDolphinsScore}), but neither team met the 100 point minimum.  No one wins the trophy.`)
 // }
 
+
+const bill = 40;
+const tip =  bill >= 50 && bill <= 300 ? bill * .15 : bill * .2;
+const total = bill + tip;
+console.log(`The bill was $${bill}, the tip was $${tip}, and the total value $${total}`);
