@@ -337,5 +337,114 @@ for(let rep = 1; rep <= 10; rep++){
 for(let voter = 1; voter <= 50; voter++){
     console.log(`Voter number ${voter} is voting.`);
 }
-*/
 //##########LOOPING ARRAYS, BREAKING AND CONTINUING###########
+const marty = ["Marty", "Wernimont", 2037 - 1990, "developer", ["Michael", "Peter", "Steven"], true];
+const types = [];
+for(let i = 0; i < marty.length; i++){
+    console.log(marty[i], typeof marty[i]);
+    types[i] = typeof marty[i];
+}
+console.log(types);
+
+const years = [1990, 2007, 1969, 2020];
+const ages = [];
+for(let i = 0; i < years.length; i++){
+    ages.push(2037 - years[i]);
+}
+console.log(ages);
+
+//continue and break
+console.log("--- ONLY STRINGS ---")
+for(let i = 0; i < marty.length; i++){
+    if(typeof marty[i] !== "string") continue;
+    console.log(marty[i], typeof marty[i]);
+}
+console.log("--- BREAK WITH NUMBER ---")
+for(let i = 0; i < marty.length; i++){
+    if(typeof marty[i] === "number") break;
+    console.log(marty[i], typeof marty[i]);
+}
+
+//##########PRACTICE #11 LOOPING ARRAYS, BREAKING AND CONTINUING###########
+const populations = [1141, 328, 44.49, 33];
+const percentages2 = [];
+function percentageOfWorld1(population){
+    return (population / 7900) * 100;
+}
+for(let i = 0; i < populations.length; i++){
+    percentages2.push(percentageOfWorld1(populations[i]));
+}
+console.log(percentages2);
+//##########LOOPING BACKWARDS AND LOOPS IN LOOPS###########
+const marty = ["Marty", "Wernimont", 2037 - 1990, "developer", ["Michael", "Peter", "Steven"]];
+for(let i = marty.length - 1; i >= 0; i--){
+    console.log(i, marty[i]);
+}
+
+for(let exercise = 1; exercise < 4; exercise++){
+    console.log(`----- Starting Exercise ${exercise} ------`);
+    for(let rep = 1; rep < 6; rep++){
+        console.log(`Lifting Weights Repetition ${rep} 🏋️‍♂️`);
+    }
+}
+//##########PRACTICE #12 LOOPING BACKWARDS AND LOOPS IN LOOPS###########
+const listOfNeighbors = [["Canada", "Mexico"], ["Spain"], ["Norway", "Sweden", "Russia"]];
+for(let i = 0; i < listOfNeighbors.length; i++){
+    for(let neighbor = 0; neighbor < listOfNeighbors[i].length; neighbor++){
+        console.log(`Neighbor: ${listOfNeighbors[i][neighbor]}`);
+    }
+}
+//##########THE WHILE LOOP###########
+// for(let rep = 1; rep <= 10; rep++){
+//     console.log(`Lifting weights repetition ${rep} 🏋️‍♂️`);
+// }
+// let rep = 1;
+// while(rep <= 10){
+//     console.log(`WHILE: Lifting weights repetition ${rep} 🏋️‍♂️`);
+//     rep++;
+// }
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+while(dice !== 6){
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if(dice === 6){
+        console.log("Loop is about to end");
+    }
+}
+//##########PRACTICE #13 THE WHILE LOOP###########
+const populations = [1141, 328, 44.49, 33];
+const percentages3 = [];
+let count = 0;
+function percentageOfWorld1(population){
+    return (population / 7900) * 100;
+}
+while(count < populations.length){
+    percentages3.push(populations[count]);
+    count++;
+}
+console.log(percentages3);
+//##########Coding Challenge #4###########
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+function calcTip(bill){
+    return bill >= 50 && bill <=300 ? bill * .15 : bill * .2;
+}
+function calcAverage(arr){
+    let sum = 0;
+    for(let i = 0; i < arr.length; i++){
+        sum += arr[i];
+    }
+    return sum / arr.length;
+}
+for(let i = 0; i < bills.length; i++){
+    tips.push(calcTip(bills[i]));
+    totals.push(bills[i]+ tips[i]);
+}
+console.log(bills)
+console.log(tips);
+console.log(totals);
+
+console.log(calcAverage(totals));
+*/
