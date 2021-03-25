@@ -82,7 +82,6 @@ tabsContainer.addEventListener('click', function (e) {
 /////////////////////////////////////////////////
 //Menu Fade Animation
 const handleHover = function (e) {
-  console.log(e);
   if (e.target.classList.contains('nav__link')) {
     const link = e.target;
     const siblings = link.closest('.nav').querySelectorAll('.nav__link');
@@ -420,7 +419,6 @@ console.log(h1.parentElement.children);
 [...h1.parentElement.children].forEach(function (el) {
   if (el !== h1) el.style.transform = 'scale(0.5)';
 });
-*/
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LIFECYCLE DOM EVENTS
@@ -437,3 +435,4 @@ window.addEventListener('load', function (e) {
 //   console.log(e);
 //   e.returnValue = '';
 // });
+*/
